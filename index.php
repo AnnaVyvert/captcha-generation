@@ -1,3 +1,5 @@
+<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/6587/6587426.png">
+
 <?php
 	function generateRandomString($length = 6) {
 		$characters = '023456789abcdefghjkmnpqrstuvwxyz';
