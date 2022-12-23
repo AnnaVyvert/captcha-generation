@@ -1,6 +1,6 @@
 <?php
 session_start();
-$string = $_SESSION["captcha"] ?? "";
+$string = $_SESSION["captcha"] ?? "nocaptcha";
 
 $start_x = 0;
 $start_y = 0;

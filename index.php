@@ -16,26 +16,40 @@
 <?php
 	session_start();
 	if (isset($_POST["captcha"])) {
+
 		$captcha_answer = $_POST["captcha"] ?? "ну не знаю";
 		$correct_captcha_answer = $_SESSION["captcha"] ?? "";
+
+		// print($captcha_answer);
+		// print($correct_captcha_answer);
+
 		if ($captcha_answer == $correct_captcha_answer) {
 			// print "Капча верна";
 			header("Location: http://anvy.istu.webappz.ru/capcha-php/shrek.html");
 		} else {
 			$_SESSION["captcha"] = generateRandomString();
+
 			// print "Капча не разгадана";
 		} 
 	} else {
 		// print "Пока ничего пользователь не отправил";
-	//	$_SESSION["captcha"] = rand(100000000,999999999);
+		// $session_captcha = rand(100000000,999999999);
 		$_SESSION["captcha"] = generateRandomString();
 	}
+	$correct_captcha_answer = $_SESSION["captcha"];
+
 ?>
 
 <form method="post">
+<?php
+	// print($_SESSION["captcha"]."|");
+	// print($captcha_answer."|");
+	// print($correct_captcha_answer."|");
+?>
 	<div class='card-head'>prove that you are <br>a human for gag</div>
-  <!-- <input type="text" placeholder="Имя пользователя" name="user"> -->
-  <!-- <input type="password" placeholder="Пароль" name="pass"> -->
+
+<!--   <input type="text" placeholder="Имя пользователя" name="user"> -->
+<!--   <input type="password" placeholder="Пароль" name="pass"> -->
   <div><img src="capcha.php"></div>
 	<br>
   <input type="text" placeholder="what is there?" name="captcha">
