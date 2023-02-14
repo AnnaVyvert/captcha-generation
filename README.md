@@ -1,6 +1,18 @@
-# captcha-generation
+## Captcha-generation
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-simple captcha component on php
+## General info
+simple captcha generator with input checker
+	
+## Technologies
+Project is created with:
+php 8.1
+	
+## Setup
+To run this project, install php then:
 
-## run
-php -S localhost:1111
+```
+php -S localhost:4000
+```
