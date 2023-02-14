@@ -1,7 +1,7 @@
 ## Captcha-generation
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Run](#setup)
 
 ## General info
 simple captcha generator with input checker
@@ -10,7 +10,7 @@ simple captcha generator with input checker
 Project is created with:
 php 8.1
 	
-## Setup
+## Run
 To run this project, install php then:
 
 ```
